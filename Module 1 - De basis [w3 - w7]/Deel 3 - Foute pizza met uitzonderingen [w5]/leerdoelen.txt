@@ -1,0 +1,1 @@
+Deel 3 - Foute pizza met uitzonderingen [week 5] In week 5 gaan we in op het omgaan met fouten en uitzonderingen. Programmeren gaat niet altijd perfect en fouten maken is normaal. In deze week leer je hoe je fouten kunt opsporen, begrijpen en oplossen, zodat je code robuust en betrouwbaar wordt.

@@ -1,0 +1,1 @@
+Deel 4 - Functions 101 [week 6] Week 6 richt zich op functies. Functies helpen je om je code overzichtelijk en herbruikbaar te maken. Je leert hoe je eigen functies kunt schrijven, wat parameters en return-waarden zijn, en hoe je functies kunt inzetten om complexe taken eenvoudiger te maken.

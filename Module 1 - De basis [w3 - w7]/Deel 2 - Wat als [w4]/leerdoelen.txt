@@ -1,0 +1,1 @@
+Deel 2 - Wat als [week 4] Week 4 staat in het teken van beslissingen maken in je code. Met conditionele statements zoals "if" en "else" leer je hoe je programma’s kunt laten reageren op verschillende omstandigheden en keuzes kunt laten maken op basis van de gegevens die je verwerkt.

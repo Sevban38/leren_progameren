@@ -1,0 +1,1 @@
+Proef Module 1 - Dungeonkeeper [week 7] In week 7 sluiten we de module af met een uitdagende proef waarin je alles wat je geleerd hebt in de praktijk kunt brengen. In het project "Dungeonkeeper" volg je een stappenplan om een simpel spel te maken, waarbij je de kennis en vaardigheden uit de vorige weken gebruikt om tot een werkend eindproduct te komen.

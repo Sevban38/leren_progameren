@@ -1,0 +1,1 @@
+Deel 1 - Omgaan met gegevens [week 2, week 3] In de eerste twee weken duiken we in het omgaan met gegevens. Je leert hoe je verschillende soorten data kunt opslaan, bewerken en gebruiken in je programma’s. Dit is de fundering van elke programmeertaal en een essentiële vaardigheid voor elke programmeur.
