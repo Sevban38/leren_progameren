@@ -1,0 +1,1 @@
+Deel 1 - De for loop [week 8] In week 8 beginnen we met de "for loop". Deze krachtige tool helpt je om taken meerdere keren te herhalen zonder dat je steeds dezelfde code opnieuw hoeft te schrijven. Je leert hoe je de "for loop" kunt gebruiken om door lijsten, strings en andere verzamelingen te itereren.

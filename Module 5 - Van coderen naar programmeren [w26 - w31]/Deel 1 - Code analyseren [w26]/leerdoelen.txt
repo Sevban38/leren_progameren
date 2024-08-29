@@ -1,0 +1,1 @@
+Deel 1 - Code analyseren [week 26] In week 26 beginnen we met het analyseren van code. Je leert hoe je bestaande code kunt lezen en begrijpen, hoe je fouten kunt opsporen en hoe je kunt zien wat er goed en minder goed is aan de code. Deze vaardigheid is essentieel voor het verbeteren van je eigen en andermans werk.

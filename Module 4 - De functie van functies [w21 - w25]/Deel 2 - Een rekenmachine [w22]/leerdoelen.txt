@@ -1,0 +1,1 @@
+Deel 2 - Een rekenmachine [week 22] Week 22 staat in het teken van een praktisch project: het bouwen van een rekenmachine. Dit project helpt je om je vaardigheden met functies te versterken terwijl je een nuttige en veelgebruikte tool maakt. Je leert hoe je verschillende functies kunt combineren om simpele berekeningen uit te voeren.

@@ -1,0 +1,1 @@
+Deel 4 - Bestaande code uitbreiden [week 30] Week 30 gaat over het uitbreiden van bestaande code. Je leert hoe je nieuwe functionaliteiten kunt toevoegen aan bestaande programma’s, hoe je ervoor zorgt dat je veranderingen goed integreren met de bestaande code, en hoe je ervoor zorgt dat je uitbreidingen efficiënt en effectief zijn.

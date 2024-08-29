@@ -1,0 +1,1 @@
+Deel 2 - Collections [week 9] Week 9 richt zich op verzamelingen (collections). Je maakt kennis met lijsten, sets en dictionaries, en leert hoe je deze kunt gebruiken en manipuleren in je programma’s. Dit geeft je de mogelijkheid om grotere hoeveelheden data/gegevens efficiënt om te gaan.

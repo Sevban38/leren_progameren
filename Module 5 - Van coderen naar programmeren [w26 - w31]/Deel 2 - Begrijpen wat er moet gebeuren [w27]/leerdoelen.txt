@@ -1,0 +1,1 @@
+Deel 2 - Begrijpen wat er moet gebeuren [week 27] Week 27 richt zich op het begrijpen van de vereisten en de logica achter een programma. Je leert hoe je kunt bepalen wat er moet gebeuren om een bepaald doel te bereiken, hoe je een plan kunt maken voor je code en hoe je kunt anticiperen op mogelijke problemen.

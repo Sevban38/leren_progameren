@@ -1,0 +1,1 @@
+Deel 3 - De while loop [week 11] In week 11 duiken we in de "while loop". Deze loop blijft herhalen zolang een bepaalde conditie waar is. Je leert hoe je de "while loop" kunt inzetten voor taken waarbij je van tevoren niet weet hoe vaak ze herhaald moeten worden, en hoe je kunt voorkomen dat je programma vastloopt in een oneindige loop.

@@ -1,0 +1,1 @@
+Deel 1 - Werken met een dataset [week 14] In week 14 starten we met het werken met datasets. Je leert hoe je datasets (list van dictionairies) kunt inlezen, verwerken en analyseren. Dit is een standaard structuur waar je in de echte wereld veel mee in aanraking zult komen.

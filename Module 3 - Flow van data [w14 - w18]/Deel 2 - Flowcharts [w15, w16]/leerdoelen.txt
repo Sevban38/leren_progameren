@@ -1,0 +1,1 @@
+Deel 2 - Flowcharts [week 15, week 16] Week 15 en 16 zijn gewijd aan flowcharts. Flowcharts zijn visuele representaties van de logica en de stappen in je programma. Je leert hoe je flowcharts kunt maken en gebruiken om je code beter te begrijpen en te plannen. Dit helpt je om je programma’s efficiënter en foutloos te maken.

@@ -1,0 +1,1 @@
+Deel 1 - Goed omgaan met functions [week 21] In week 21 beginnen we met het goed omgaan met functies. Je leert waarom functies belangrijk zijn, hoe je ze effectief kunt schrijven en gebruiken, en hoe ze je helpen om je code overzichtelijk en herbruikbaar te maken. We gaan ook in op parameters, return-waarden en scope.

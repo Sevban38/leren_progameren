@@ -1,0 +1,1 @@
+Proef Module 2 - RobotArm Challenges [week 12, week 13] In week 12 en 13 sluiten we de module af met "RobotArm Challenges". Je gebruikt de kennis en vaardigheden die je in deze module hebt opgedaan om een reeks uitdagende puzzels op te lossen. Hierbij programmeer je een robotarm om verschillende taken uit te voeren, zoals objecten verplaatsen en sorteren.

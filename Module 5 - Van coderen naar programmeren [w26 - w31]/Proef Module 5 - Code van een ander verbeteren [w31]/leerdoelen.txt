@@ -1,0 +1,1 @@
+Proef Module 5 - Code van een ander verbeteren [week 31] In week 31 sluiten we de module af met een proef waarin je de code van een ander gaat verbeteren. Dit is een echte test van je analyse- en programmeervaardigheden. Je krijgt een bestaand programma (van een andere student) en je taak is om het te verbeteren, fouten te corrigeren zonder de functionaliteit aan te passen. 
