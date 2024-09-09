@@ -14,4 +14,4 @@ kortingsbon_value = 0.50
 total_cost = (croissantjes * croissant_price) + (stokbroden * stokbrood_price) - (kortingsbonnen * kortingsbon_value)
 
 
-print("The total amount to pay is:", total_cost, "euro")  
+print("de totale prijs is:", total_cost, "euro")  
