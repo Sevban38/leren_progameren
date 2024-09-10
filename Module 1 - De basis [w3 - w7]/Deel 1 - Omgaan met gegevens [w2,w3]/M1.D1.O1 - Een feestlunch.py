@@ -1,3 +1,4 @@
+from termcolor import colored, cprint, COLORS
 
 croissantjes = 17
 croissant_price = 0.39
@@ -14,4 +15,4 @@ kortingsbon_value = 0.50
 total_cost = (croissantjes * croissant_price) + (stokbroden * stokbrood_price) - (kortingsbonnen * kortingsbon_value)
 
 
-print("de totale prijs is:", total_cost, "euro")  
+print(f"de totale prijs is: {colored(total_cost, "red")} euro")  
