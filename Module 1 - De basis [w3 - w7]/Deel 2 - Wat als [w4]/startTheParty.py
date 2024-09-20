@@ -14,6 +14,7 @@ try:
 except ValueError:
     gasten = 0
 
+print(gasten)
 drank = True
 chips = True
 
@@ -47,9 +48,9 @@ special_condition_1 = gastheer == mijn_naam
 special_condition_2 = gastheer == slb_naam
 
 if (special_condition_1 or 
-    (not special_condition_2 and start_condition_1 and start_condition_2 and 
+    (not special_condition_2 and gasten > 0 and start_condition_1 and start_condition_2 and 
      start_condition_3 and start_condition_4 and start_condition_5 and start_condition_6 and
-     start_condition_7 and start_condition_8)):
+        start_condition_7 and start_condition_8)):
     print('Start the Party')
 else:
     print('No Party')

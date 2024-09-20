@@ -7,7 +7,11 @@ def main():
         if antwoord == "ja":
             antwoord = input("Is de kaas belachelijk duur? (ja/nee): ").strip().lower()
             if antwoord == "ja":
-                print("De kaas die je in gedachten hebt is Emmenthaler.")
+                antwoord = input ("vind rudi de kaas lekker: (ja/nee)") 
+                if antwoord == "ja":
+                     print (" die kaas bestaat niet")
+                else:  
+                    print ("emmentaler")
             else:
                 print("De kaas die je in gedachten hebt is Leerdammer.")
         else:

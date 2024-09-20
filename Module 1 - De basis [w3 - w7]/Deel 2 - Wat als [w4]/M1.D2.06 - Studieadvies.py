@@ -1,20 +1,40 @@
-# stellingen 
-STELLINGEN = [
-    "Ik werk altijd hard",
-    "Ik ben vaak op tijd",
-    "Ik doe regelmatig mijn huiswerk",
-    "Ik ben soms afgeleid",
-    "Ik maak nooit fouten"
-]
+STUDIEDOKTER_TITEL = '''
+*********************** STUDIEADVIES ***********************
+Ik ga jou helpen met jouw opleiding. Jij krijgt een aantal stellingen te zien.
+Voor elke stelling moet je zeggen hoeveel dat bij jou voorkomt. Je kunt steeds 
+antwoorden: 0 is 'altijd'; 1 is 'vaak'; 2 is 'regelmatig'; 3 is 'soms'; 4 is 'nooit'.
+Het is belangrijk om eerlijk te zijn. Op basis van jouw antwoorden krijg je advies. 
+'''
+OPTIES = "Kies 0: altijd; 1: vaak; 2: regelmatig; 3: soms; 4: nooit"
+AANTAL_WEKEN_VRAAG = 'Hoeveel weken ben je al bezig met de opleiding?'
+COMPETENTIE_STELLING_1 = 'Ik voel stress of blokkades bij het maken van programmeeropdrachten.'
+COMPETENTIE_STELLING_2 = 'Ik stel programmeeropdrachten en -uitdagingen uit.'
+COMPETENTIE_STELLING_3 = 'Ik denk dat ik geen talent heb voor de opleiding.'
+COMPETENTIE_STELLING_4 = 'Ik vermijd assessments (CJV) en feedback van kritische docenten. '
+COMPETENTIE_STELLING_5 = 'Ik vergelijk mezelf met anderen die beter lijken te zijn.'
+COMPETENTIE_STELLING_6 = 'Ik voel geen interesse in nieuwe programmeertechnieken.'
+COMPETENTIE_STELLING_7 = 'Ik kopieer code van anderen en lever dat in alsof het helemaal van mij is.'
 
-COMPETENTIE_ADVIES_ZORGELIJK = "Zorgelijk"
-COMPETENTIE_ADVIES_TWIJFELACHTIG = "Twijfelachtig"
-COMPETENTIE_ADVIES_GERUSTSTELLEND = "Geruststellend"
+COMPETENTIE_ADVIES_TITEL = '''
+*********************** STUDIEADVIES ***********************'''
+COMPETENTIE_ADVIES_ZORGELIJK = '''
+Het lijkt erop dat je nog weinig zelfvertrouwen, voldoening en plezier ervaart 
+in het leren programmeren. Er zijn altijd mogelijkheden om je te helpen de draad 
+op te pakken met de opleiding. Praat met jouw SLB-er over extra begeleiding en oefeningen.
+'''
+COMPETENTIE_ADVIES_TWIJFELACHTIG = '''
+Het lijkt erop dat je af en toe weinig zelfvertrouwen, voldoening of plezier ervaart
+in het leren programmeren. Houd je zelfvertrouwen en motivatie in de gaten!
+'''
+COMPETENTIE_ADVIES_GERUSTSTELLEND = '''
+Het lijkt erop dat je voldoende zelfvertrouwen, voldoening en plezier ervaart in
+het leren programmeren. Mocht het een keer minder gaan, maak je geen zorgen. Have fun!
+'''
 
 def get_user_input(statement):
     while True:
         try:
-            answer = int(input(f"{statement}\n0: altijd\n1: vaak\n2: regelmatig\n3: soms\n4: nooit\n"))
+            answer = int(input(f"{statement}\n{OPTIES}\n"))
             if answer in [0, 1, 2, 3, 4]:
                 return answer
             else:
@@ -24,10 +44,10 @@ def get_user_input(statement):
 
 def main():
     total_score = 0
-    for statement in STELLINGEN:
+    for statement in [COMPETENTIE_STELLING_1, COMPETENTIE_STELLING_2, COMPETENTIE_STELLING_3, COMPETENTIE_STELLING_4, COMPETENTIE_STELLING_5, COMPETENTIE_STELLING_6, COMPETENTIE_STELLING_7]:
         total_score += get_user_input(statement)
     
-    average_score = total_score / len(STELLINGEN)
+    average_score = total_score / 7
     
     if average_score <= 2:
         advies = COMPETENTIE_ADVIES_ZORGELIJK
@@ -37,7 +57,12 @@ def main():
         advies = COMPETENTIE_ADVIES_GERUSTSTELLEND
     
     print(f"Je gemiddelde score is: {average_score:.2f}")
-    print(f"Advies: {advies}")
+    print(f"{COMPETENTIE_ADVIES_TITEL}\n{advies}")
 
 if __name__ == "__main__":
-    main()
+    print(STUDIEDOKTER_TITEL)
+    weeks = int(input(AANTAL_WEKEN_VRAAG))
+    if weeks < 1:
+        print("Ongeldige invoer. Het aantal weken moet minimaal 1 zijn.")
+    else:
+        main()
