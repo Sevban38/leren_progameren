@@ -11,7 +11,7 @@ if __name__ == "__main__":
         else:
             return "less"
 
-    # Test cases
+    # Test 
     expected = 'equal'
     result = compare_numbers(5, 5)
     test('TEST nr1=nr2', expected, result)
