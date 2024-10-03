@@ -13,6 +13,10 @@ elif gekozen_seizoen == 'b':
     weer_type = 'warm'
 elif gekozen_seizoen == 'd':
     weer_type = 'koud'
+else: 
+    print ("dit is geen optie!!!")
+
+
 
 if len(weer_type) > 0:
     print(f'Dus jij houdt van {weer_type} weer!')
