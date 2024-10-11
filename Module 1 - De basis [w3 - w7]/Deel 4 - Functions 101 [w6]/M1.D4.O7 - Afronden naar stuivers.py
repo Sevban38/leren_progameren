@@ -3,6 +3,6 @@ def afronding_naar_stuivers(price):
     return rounded_price
 
 # Test the function with example prices
-prices = [2.24, 13.01, 5.99, 10.50, 7.75]
+prices = [2.24, 13.01, 5.99, 10.50, 7.75, 6.24]
 rounded_prices = [afronding_naar_stuivers(price) for price in prices]
 print(rounded_prices) 
