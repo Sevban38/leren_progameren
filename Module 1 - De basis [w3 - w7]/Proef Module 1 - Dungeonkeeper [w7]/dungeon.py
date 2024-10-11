@@ -41,9 +41,15 @@ time.sleep(3)
 # === [kamer 7] === #
 print('Je opent de deur en ziet een grote kamer voor je.')
 print('In het midden van de kamer zie je een grote tafel staan.')
-print('Op de tafel ligt een rupee.')
-print('Je pakt de rupee op en stopt hem in je zak.')
-item.append('rupee')
+chance = random.randint(1, 10)
+
+if chance == 1:
+    print('Helaas, er ligt geen rupee op de tafel.')
+else:
+    print('Op de tafel ligt een rupee.')
+    print('Je pakt de rupee op en stopt hem in je zak.')
+    item.append('rupee')
+
 time.sleep(3)
 
 print('Wil je naar kamer 2 of kamer 8?')
@@ -65,7 +71,7 @@ if keuze == '2':
 
     if antwoord == eval(f'{num1} {operator} {num2}'):
         print('Het standbeeld laat de sleutel vallen en je pakt het op')
-        item.append('sleutel')
+        item.append('rupee')
         print('Wil je naar kamer 6 of kamer 8?')
         keuze = input('Typ "6" voor kamer 6 of "8" voor kamer 8: ')
         if keuze == '6':
@@ -85,7 +91,7 @@ if keuze == '2':
             dice1 = random.randint(1, 6)
             dice2 = random.randint(1, 6)
             total = dice1 + dice2
-
+            print (f'Je hebt {dice1} en {dice2} gegooid. Het totaal is {total}.')
             if total > 7:
                 print('Je hebt gewonnen! Het aantal rupees dat je hebt is verdubbeld.')
                 item.append('rupee')
@@ -133,7 +139,7 @@ if keuze == '2':
                 dice1 = random.randint(1, 6)
                 dice2 = random.randint(1, 6)
                 total = dice1 + dice2
-
+                print (f'Je hebt {dice1} en {dice2} gegooid. Het totaal is {total}.')
                 if total > 7:
                     print('Je hebt gewonnen! Het aantal rupees dat je hebt is verdubbeld.')
                     item.append('rupee')
@@ -165,7 +171,7 @@ elif keuze == '8':
     dice1 = random.randint(1, 6)
     dice2 = random.randint(1, 6)
     total = dice1 + dice2
-
+    print (f'Je hebt {dice1} en {dice2} gegooid. Het totaal is {total}.')
     if total > 7:
         print('Je hebt gewonnen! Het aantal rupees dat je hebt is verdubbeld.')
         item.append('rupee')
@@ -188,26 +194,46 @@ else:
     print('Ongeldige keuze. Het spel eindigt hier.')
     sys.exit()
 
+
+# === [kamer 9] === #
+enchantment = random.choice(['defense', 'health'])
+if enchantment == 'defense':
+    player_defense += 1
+    print('Je voelt een betovering en je verdediging wordt versterkt.')
+elif enchantment == 'health':
+    player_health += 2
+    print('Je voelt een betovering en je gezondheid wordt versterkt.')
+print('')
+time.sleep(2)
+
 # === [kamer 3] === #
 item_choice = ''
 print('Je komt vanuit kamer 2 en ziet een deur naar kamer 6.')
 print('Je ziet ook een deur naar kamer 4.')
 print('')
 print('Welkom bij het verkooppunt!')
-print('Je hebt een rupee en kunt een item kopen.')
+print('Je hebt', len(item), 'rupee(s) en kunt een item kopen.')
 print('Beschikbare items:')
-print('1. Zwaard (+2 player damage)')
-print('2. Bijl (+3 player damage)')
-print('3. Schild (+2 player defense)')
+if len(item) >= 1:
+    print('1. Zwaard (+2 player damage)')
+if len(item) >= 2:
+    print('2. Bijl (+3 player damage)')
+if len(item) >= 3:
+    print('3. Schild (+2 player defense)')
+if 'sleutel' not in item:
+    print('4. Sleutel voor de schatkist')
 item_choice = input('Typ het nummer van het item dat je wilt kopen: ')
 
-if item_choice == '1':
+if item_choice == '1' and len(item) >= 1:
     print('Je hebt een zwaard gekocht!')
     player_attack += 2
-elif item_choice == '2':
+elif item_choice == '2' and len(item) >= 2:
     print('Je hebt bijl gekozen')
-elif item_choice == '3':
+elif item_choice == '3' and len(item) >= 3:
     print('Je hebt schild gekozen')
+elif item_choice == '4' and 'sleutel' not in item:
+    print('Je hebt de sleutel voor de schatkist gekocht!')
+    item.append('sleutel')
 else:
     print('Ongeldige keuze. Het spel eindigt hier.')
     sys.exit()
