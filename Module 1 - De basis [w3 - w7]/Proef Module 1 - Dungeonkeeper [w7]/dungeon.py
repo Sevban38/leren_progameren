@@ -79,7 +79,7 @@ def kamer2():
     antwoord = int(input('Wat toets je in?'))
 
     if antwoord == eval(f'{num1} {operator} {num2}'):
-        print('Het standbeeld laat de sleutel vallen en je pakt het op')
+        print('Het standbeeld laat de rupee vallen en je pakt het op')
         item.append('rupee')
     print('Wil je naar kamer 6 of kamer 8?')
     keuze = input('Typ "6" voor kamer 6, "8" voor kamer 8: ')
@@ -89,6 +89,7 @@ def kamer2():
         kamer8()
 
 def kamer6():
+    global player_attack, player_defense, player_health
     zombie_attack = 1
     zombie_defense = 0
     zombie_health = 2
@@ -97,13 +98,14 @@ def kamer6():
 
     player_health = fight(player_attack, player_defense, player_health, zombie_attack, zombie_defense, zombie_health)
     
-    kamerkeuze = print('wilt uw naar kamer 3 of kamer 8?')
-    if kamerkeuze == 3:
-        kamer3()
-    elif kamerkeuze == 8:
-        kamer8()
+    
     print('')
     time.sleep(2)
+    keuze = input('wilt uw naar kamer 3 of kamer 8?')
+    if keuze == '3':
+        kamer3()
+    elif keuze == '8':
+        kamer8()
 
 
 def kamer8():
