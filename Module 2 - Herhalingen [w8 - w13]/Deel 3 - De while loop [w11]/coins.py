@@ -1,35 +1,35 @@
-# name of student: 
-# number of student:
-# purpose of program: To calculate and return the correct amount of change using the least number of coins.
-# structure of program: The program calculates the change to be returned and iteratively determines the number of each coin type to return.
+# naam van de student: Sevban  
+# studentnummer: 99081630
+# doel van het programma: Het berekenen en teruggeven van het juiste bedrag aan wisselgeld met het minste aantal munten.
+# structuur van het programma: Het programma berekent het terug te geven wisselgeld en bepaalt iteratief het aantal munten van elke muntsoort dat moet worden teruggegeven.
 
-coinValues = [500, 200, 100, 50, 20, 10, 5, 2, 1] # List of coin values in cents, including 1, 2, and 5-euro coins.
+muntWaardes = [500, 200, 100, 50, 20, 10, 5, 2, 1] # Lijst van muntwaardes in centen, inclusief 1, 2 en 5-euromunten.
 
-toPay = int(float(input('Amount to pay: ')) * 100) # Convert the amount to pay from euros to cents.
-paid = int(float(input('Paid amount: ')) * 100) # Convert the paid amount from euros to cents.
-change = paid - toPay # Calculate the total change to be returned.
+teBetalen = int(float(input('Te betalen bedrag: ')) * 100) # Converteer het te betalen bedrag van euro naar centen.
+betaald = int(float(input('Betaald bedrag: ')) * 100) # Converteer het betaalde bedrag van euro naar centen.
+wisselgeld = betaald - teBetalen # Bereken het totale wisselgeld dat moet worden teruggegeven.
 
-returnedCoins = {} # Dictionary to keep track of the number of each coin returned.
+teruggegevenMunten = {} # Woordenboek om het aantal teruggegeven munten bij te houden.
 
-while change > 0 and len(coinValues) > 0: # Loop until all change is returned or there are no more coin types left.
-  coinValue = coinValues.pop(0) # Get the highest coin value available.
-  nrCoins = change // coinValue # Calculate the maximum number of coins of this type that can be returned.
+while wisselgeld > 0 and len(muntWaardes) > 0: # Blijf doorgaan totdat al het wisselgeld is teruggegeven of er geen muntsoorten meer over zijn.
+  muntWaarde = muntWaardes.pop(0) # Krijg de hoogste beschikbare muntwaarde.
+  aantalMunten = wisselgeld // muntWaarde # Bereken het maximale aantal munten van dit type dat kan worden teruggegeven.
 
-  if nrCoins > 0: # If there are coins of this type to return.
-    print('Return maximal ', nrCoins, ' coins of ', coinValue, ' cents!') # Inform the user of the maximum number of coins to return.
-    nrCoinsReturned = int(input('How many coins of ' + str(coinValue) + ' cents did you return? ')) # Ask the user how many coins of this type were actually returned.
-    if nrCoinsReturned > nrCoins:
-        print(f"You can't return more than {nrCoins} coins of {coinValue} cents.")
-        nrCoinsReturned = nrCoins
-    change -= nrCoinsReturned * coinValue # Subtract the value of the returned coins from the change.
-    returnedCoins[coinValue] = nrCoinsReturned # Record the number of coins returned for this coin type.
+  if aantalMunten > 0: # Als er munten van dit type moeten worden teruggegeven.
+    print('Geef maximaal', aantalMunten, 'munten van', muntWaarde, 'cent terug!') # Informeer de gebruiker over het maximale aantal munten dat moet worden teruggegeven.
+    aantalTeruggegevenMunten = int(input('Hoeveel munten van ' + str(muntWaarde) + ' cent heb je teruggegeven? ')) # Vraag de gebruiker hoeveel munten van dit type daadwerkelijk zijn teruggegeven.
+    if aantalTeruggegevenMunten > aantalMunten:
+        print(f"Je kunt niet meer dan {aantalMunten} munten van {muntWaarde} cent teruggeven.")
+        aantalTeruggegevenMunten = aantalMunten
+    wisselgeld -= aantalTeruggegevenMunten * muntWaarde # Trek de waarde van de teruggegeven munten af van het wisselgeld.
+    teruggegevenMunten[muntWaarde] = aantalTeruggegevenMunten # Registreer het aantal teruggegeven munten voor dit munttype.
 
-if change > 0: # If there is still change left to return.
-  print('Change not returned: ', str(change) + ' cents') # Inform the user that not all change was returned.
+if wisselgeld > 0: # Als er nog wisselgeld over is om terug te geven.
+  print('Niet teruggegeven wisselgeld:', str(wisselgeld) + ' cent') # Informeer de gebruiker dat niet al het wisselgeld is teruggegeven.
 else:
-  print('Done') # Inform the user that all change was returned.
+  print('Klaar') # Informeer de gebruiker dat al het wisselgeld is teruggegeven.
 
-# Print a summary of all returned coins.
-print('Summary of returned coins:')
-for coin in sorted(returnedCoins.keys(), reverse=True):
-  print(f'{returnedCoins[coin]} coins of {coin} cents')
+# Print een samenvatting van alle teruggegeven munten.
+print('Samenvatting van teruggegeven munten:')
+for munt in sorted(teruggegevenMunten.keys(), reverse=True):
+  print(f'{teruggegevenMunten[munt]} munten van {munt} cent')
