@@ -944,6 +944,17 @@ class RobotArm:
     self._wait()
 
 
+  def moverightfunc(self, x):
+    for i in range(1, x):
+      self.moveRight()
+  def moveleftfunc(self, x):
+    for i in range(1, x):
+      self.moveLeft()
+
+#zelf gemaakte funcitons voor DRY
+  
+
+
 if __name__ == "__main__":
   print('tested module RobotArm')
 
