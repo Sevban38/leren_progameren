@@ -7,11 +7,14 @@ from challenges.expert import challenges
 robotArm = RobotArm(challenges[3],0)
 
 # your code starts here: 
-for i in range (4):
+nummer = 1
+for i in range (9):
+    
     robotArm.grab()
-    robotArm.moverightfunc(2)
+    robotArm.moverightfunc(nummer)
     robotArm.drop()
-    robotArm.moveleftfunc(2)
+    robotArm.moveleftfunc(nummer)
+    nummer += 1
    
 
 
