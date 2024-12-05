@@ -9,127 +9,85 @@ robotArm = RobotArm(challenges[4],0)
 # your code starts here: 
 # Move the robot arm to the starting position
 robotArm.speed=4
-red = 0
-blue = 0
-green = 0
-for i in range(10):
-    robotArm.grab()
-    color = robotArm.scan()
-    if color == "red":
-        robotArm.drop()
-        red =+ 1 
-    elif color == "green":
-        robotArm.drop()
-        green =+ 1
-    elif color == "blue":
-        robotArm.drop()
-        blue =+ 1
-    robotArm.moveRight()
-robotArm.moveleftfunc(10)
-if red > blue and red > green and blue > green:
-    for i in range (10):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == "red":
-            robotArm.moveleftfunc(10)
-            robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "green":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
-        robotArm.moveRight()
-elif red > blue and red > green and green > blue:
-    for i in range (10):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == "red":
-            robotArm.moveleftfunc(10)
-            robotArm.drop()
-        elif color == "green":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
-        robotArm.moveRight()
-elif blue > red and blue > green and red > green:
-    for i in range (10):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == "blue":
-            robotArm.moveleftfunc(10)
-            robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "green":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
-        robotArm.moveRight()
-elif blue > red and blue > green and green > red:
-    for i in range (10):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == "blue":
-            robotArm.moveleftfunc(10)
-            robotArm.drop()
-        elif color == "green":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
-        robotArm.moveRight()
-elif green > red and green > blue and red > blue:
-    for i in range (10):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == "green":
-            robotArm.moveleftfunc(10)
-            robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
-        robotArm.moveRight()
-elif green > red and green > blue and blue > red:
-    for i in range (10):
-        robotArm.grab()
-        color = robotArm.scan()
-        if color == "green":
-            robotArm.moveleftfunc(10)
-            robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
-        robotArm.moveRight()
-    
-    
+robotArm.grab()
+robotArm.scan()
+if robotArm.scan() == "red":
+    robotArm.moverightfunc(8)
+    robotArm.drop()
+    robotArm.moveleftfunc(7)
+elif robotArm.scan() == "green":
+    robotArm.moverightfunc(9)
+    robotArm.drop()
+    robotArm.moveleftfunc(8)
+else :
+    robotArm.moverightfunc(10)
+    robotArm.drop()
+    robotArm.moveleftfunc(9)
+robotArm.grab()
+if robotArm.scan() == "red":
+    robotArm.moverightfunc(7)
+    robotArm.drop()
+    robotArm.moveleftfunc(6)
+elif robotArm.scan() == "green":
+    robotArm.moverightfunc(8)
+    robotArm.drop()
+    robotArm.moveleftfunc(7)
+else :
+    robotArm.moverightfunc(9)
+    robotArm.drop()
+    robotArm.moveleftfunc(8)
+robotArm.grab()
+if robotArm.scan() == "red":
+    robotArm.moverightfunc(6)
+    robotArm.drop()
+    robotArm.moveleftfunc(5)
+elif robotArm.scan() == "green":
+    robotArm.moverightfunc(7)
+    robotArm.drop()
+    robotArm.moveleftfunc(6)
+else :
+    robotArm.moverightfunc(8)
+    robotArm.drop()
+    robotArm.moveleftfunc(7)
+robotArm.grab()
+if robotArm.scan() == "red":
+    robotArm.moverightfunc(5)
+    robotArm.drop()
+    robotArm.moveleftfunc(4)
+elif robotArm.scan() == "green":
+    robotArm.moverightfunc(6)
+    robotArm.drop()
+    robotArm.moveleftfunc(5)
+else :
+    robotArm.moverightfunc(7)
+    robotArm.drop()
+    robotArm.moveleftfunc(6)
+robotArm.grab()
+if robotArm.scan() == "red":
+    robotArm.moverightfunc(4)
+    robotArm.drop()
+    robotArm.moveleftfunc(3)
+elif robotArm.scan() == "green":
+    robotArm.moverightfunc(5)
+    robotArm.drop()
+    robotArm.moveleftfunc(4)
+else :
+    robotArm.moverightfunc(6)
+    robotArm.drop()
+    robotArm.moveleftfunc(5)
+robotArm.grab()
+if robotArm.scan() == "red":
+    robotArm.moverightfunc(3)
+    robotArm.drop()
+    robotArm.moveleftfunc(2)
+elif robotArm.scan() == "green":
+    robotArm.moverightfunc(4)
+    robotArm.drop()
+    robotArm.moveleftfunc(3)
+else :
+    robotArm.moverightfunc(5)
+    robotArm.drop()
+    robotArm.moveleftfunc(4)
 
 
 
