@@ -7,15 +7,16 @@ from challenges.medium import challenges
 robotArm = RobotArm(challenges[3],0)
 
 # your code starts here: 
+robotArm.moverightfunc(9)
 def grabandcheckifwhite():
     robotArm.grab()
     if robotArm.scan() == "white":
         robotArm.moveRight()
         robotArm.drop()
-        robotArm.moveRight()
+        robotArm.moveleftfunc(3)
     else:
         robotArm.drop()
-        robotArm.moveRight()
+        robotArm.moveLeft()
         
 for x in range (1, 10):
     grabandcheckifwhite()
