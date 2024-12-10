@@ -7,13 +7,14 @@ from challenges.expert import challenges
 robotArm = RobotArm(challenges[2],0)
 
 # your code starts here: 
-for i in range (50):
+robotArm.speed = 4
+for i in range (9):
     robotArm.grab()
     robotArm.scan()
     if robotArm.scan() == "red":
-        robotArm.moverightfunc(10)
+        robotArm.moverightfunc(10 - i)
         robotArm.drop()
-        robotArm.moveleftfunc(10)
+        robotArm.moveleftfunc(10 - i)
         
     else:
         robotArm.drop()

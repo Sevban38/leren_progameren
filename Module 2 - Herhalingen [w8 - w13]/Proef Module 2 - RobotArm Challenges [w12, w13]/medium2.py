@@ -25,11 +25,9 @@ def movestackandnextstack():
     move1leftstack()
     robotArm.moveleftfunc(3)
 
-movestackandnextstack()
-movestackandnextstack()
-movestackandnextstack()
-movestackandnextstack()
-movestackandnextstack()
+for x in range (1, 5):
+    movestackandnextstack()
+
 
 
 

@@ -155,6 +155,7 @@ class RobotArm:
   _solutionDone = False
   _missionReported = False
   _aborted = False
+  _currentColumn = 0
   _actionFlaws = [
     ['left','right'],
     ['right','left'],
@@ -943,13 +944,14 @@ class RobotArm:
 
     self._wait()
 
-
   def moverightfunc(self, x):
     for i in range(1, x):
       self.moveRight()
+      self._currentColumn += 1;
   def moveleftfunc(self, x):
     for i in range(1, x):
       self.moveLeft()
+      self._currentColumn -= 1;
 
 #zelf gemaakte funcitons voor DRY
   
