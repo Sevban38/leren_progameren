@@ -34,15 +34,7 @@ if red >= blue and red >= yellow and blue >= yellow:
         if color == "red":
             robotArm.moveleftfunc(10 - i)
             robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "yellow":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
+       
         robotArm.moveRight()
 elif red >= blue and red >= yellow and yellow > blue:
     print("red >= blue and red >= yellow and yellow > blue = true")
@@ -52,15 +44,7 @@ elif red >= blue and red >= yellow and yellow > blue:
         if color == "red":
             robotArm.moveleftfunc(10 - i)
             robotArm.drop()
-        elif color == "yellow":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
+       
         robotArm.moveRight()
 elif blue >= red and blue >= yellow and red >= yellow:
     print("blue >= red and blue >= yellow and red >= yellow = true")
@@ -70,15 +54,7 @@ elif blue >= red and blue >= yellow and red >= yellow:
         if color == "blue":
             robotArm.moveleftfunc(10 - i)
             robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "yellow":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
+       
         robotArm.moveRight()
 elif blue >= red and blue >= yellow and yellow >= red:
     print(" blue >= red and blue >= yellow and yellow >= red = true")
@@ -88,15 +64,7 @@ elif blue >= red and blue >= yellow and yellow >= red:
         if color == "blue":
             robotArm.moveleftfunc(10 - i)
             robotArm.drop()
-        elif color == "yellow":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
+     
         robotArm.moveRight()
 elif yellow >= red and yellow >= blue and red >= blue:
     print("yellow >= red and yellow >= blue and red >= blue = true")
@@ -106,15 +74,7 @@ elif yellow >= red and yellow >= blue and red >= blue:
         if color == "yellow":
             robotArm.moveleftfunc(10 - i)
             robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
+      
         robotArm.moveRight()
 elif yellow >= red and yellow >= blue and blue >= red:
     print(" yellow >= red and yellow >= blue and blue >= red = true")
@@ -124,15 +84,7 @@ elif yellow >= red and yellow >= blue and blue >= red:
         if color == "yellow":
             robotArm.moveleftfunc(10 - i)
             robotArm.drop()
-        elif color == "blue":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.drop()
-        elif color == "red":
-            robotArm.moveleftfunc(10 - i)
-            robotArm.moveRight()
-            robotArm.moveRight()
-            robotArm.drop()
+      
         robotArm.moveRight()
 
 
