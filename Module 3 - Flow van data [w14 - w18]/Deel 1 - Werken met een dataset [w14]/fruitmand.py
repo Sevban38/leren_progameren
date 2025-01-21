@@ -9,12 +9,6 @@ fruitmand = [{
     'color' : 'green',
     'round' : True
 },{
-    'name' : 'peer',
-    'weight' : 195,
-    'color' : 'green',
-    'round' : False
-},
-{
     'name' : 'sinaasappel',
     'weight' : 130,
     'color' : 'orange',
