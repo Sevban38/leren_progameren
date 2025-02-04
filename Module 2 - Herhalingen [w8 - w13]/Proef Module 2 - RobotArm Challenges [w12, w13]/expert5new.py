@@ -34,20 +34,29 @@ robotArm.moveRight()
 for color, count in color_dict.items():
     if count == max(color_dict.values()):
         print(f"{color} >= {', '.join([c for c in color_dict if color_dict[c] == count])} = true")
-        for i in range(10):
+        for i in range(11):
             robotArm.grab()
-            color = robotArm.scan()
+            scancolor = robotArm.scan()
             
-            if color == color:
-                robotArm.moveleftfunc(1 + i)
+            if scancolor == color:
+                robotArm.moveleftfunc(2 + i)
                 robotArm.drop()
+                robotArm.moverightfunc(1 + i)
+                returncount =+ 1
+                if returncount == count:
+                    quit()
             else: 
                 robotArm.drop()
-            robotArm.moveRight()
+                robotArm.moveRight()
+            
+
+            
+            
 # your code ends here
 
 # report the results of the mission
 robotArm.report()
+
 
 # want help? Unlock code below!
 robotArm.help()
