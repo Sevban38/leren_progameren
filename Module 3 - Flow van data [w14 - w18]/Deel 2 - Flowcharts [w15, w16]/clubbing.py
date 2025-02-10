@@ -5,7 +5,7 @@ PRIJS_CHAMPAGNE = 12.30
 DRANKJES = ('cola', 'bier', 'champagne')
 VIP_LIST = ('jeroen', 'jouke', 'rudi')
 
-# Start van het programma
+#start !!
 leeftijd = int(input("Hoe oud ben je? "))
 
 if leeftijd < 18:
