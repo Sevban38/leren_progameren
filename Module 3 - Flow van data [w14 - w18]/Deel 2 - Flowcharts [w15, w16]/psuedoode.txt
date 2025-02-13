@@ -1,0 +1,21 @@
+start
+er word een random getal gepakt
+while true mag je raden 
+try 
+ try:
+        geradengetal = int(input("Geef een getal: "))
+    except ValueError:
+        print("Ongeldige invoer. Voer een getal in.")
+        continue
+    if geradengetal == geheimgetal:
+        print("Gefeliciteerd, je hebt het getal geraden!")
+        print(f"Het geheime getal was {geheimgetal}.")
+        break
+    else: 
+        geradengetalen.append(geradengetal)
+met een if word er gekeken of geradengetal randomgetal is en word er gefeliciteerd
+als na 20 keer niet geraden is dan word er geprint
+ if kansen == 20:
+        print("De getallen die je geraden hebt zijn: " + ', '.join(map(str, geradengetalen)))
+        print(f"Je hebt het getal niet geraden. Het geheime getal was {geheimgetal}.")
+        break
