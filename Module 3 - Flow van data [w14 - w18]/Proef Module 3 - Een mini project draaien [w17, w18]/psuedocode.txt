@@ -1,0 +1,12 @@
+start
+vul in unieke naam
+imput unieke naam
+nee dan terug ja dan verder
+3x gedaan? 
+nee dan terug nr vul in unieke naam, ja dan verder
+wil je extra toevoegen, ja dan terug naar unieke naam invullen. nee dan verder 
+vedeel lootjes
+zijn de lootjes uniek, ja dan verder. nee dan terug naar verdeel lootjes
+hebben mensen zichzelf, ja dan terug naar verdeel lootjes. nee dan verder
+print lijst lootjes
+einde 
