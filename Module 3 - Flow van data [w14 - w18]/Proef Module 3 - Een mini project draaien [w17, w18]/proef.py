@@ -39,7 +39,15 @@ def main():
     lootjes_resultaat = trek_lootjes(namen)
     
     print("\nDe lootjes zijn getrokken!")
-    for naam, lootje in lootjes_resultaat.items():
-        print(f"{naam} heeft {lootje} getrokken.")
+    
+    while True:
+        zoek_naam = input("\nVoer een naam in om het bijbehorende lootje te zien (of typ 'stop' om te stoppen): ").strip()
+        if zoek_naam == 'stop':
+            break
+        elif zoek_naam in lootjes_resultaat:
+            lootje = lootjes_resultaat[zoek_naam]
+            print(f"{zoek_naam} heeft {lootje} getrokken.")
+        else:
+            print("Deze naam is niet gevonden. Probeer opnieuw.")
 
 main()
