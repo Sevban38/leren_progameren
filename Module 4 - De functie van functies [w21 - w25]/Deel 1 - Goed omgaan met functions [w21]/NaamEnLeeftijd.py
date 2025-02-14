@@ -1,7 +1,8 @@
 def get_name_and_age():
     name = input("Enter your name: ")
     age = input("Enter your age: ")
-    return {'name': name, 'age': age}
+    city = input("Enter your city: ")
+    return {'name': name, 'age': age, 'city': city}
 
 def collect_data():
     data_list = []
@@ -15,5 +16,7 @@ def collect_data():
 
 data = collect_data()
 for person in data:
-    print(f"Name: {person['name']}, Age: {person['age']}")
-    print(f"{person['name']} is {person['age']} jaar")
+    print(f"Name: {person['name']}, Age: {person['age']}, City: {person['city']}")
+    print(f"{person['name']} is {person['age']} jaar en woont in {person['city']}.")
+
+
