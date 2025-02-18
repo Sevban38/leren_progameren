@@ -6,8 +6,9 @@ for person in data:
     age = int(person['age'])  # Zorg dat age een integer is
     city = person['city']
 
-    if age >= 18:
-        age_text = colored(f"al {age} jaar volwassen", "red")
+    if age >= 18:  
+        VW = age - 18
+        age_text = colored(f"al {VW} jaar volwassen", "red")
     else:
         age_text = colored("nog niet volwassen", "green")
 
