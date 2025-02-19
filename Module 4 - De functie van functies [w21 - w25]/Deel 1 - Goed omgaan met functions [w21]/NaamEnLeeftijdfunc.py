@@ -1,6 +1,6 @@
 def get_name_and_age():
     name = input("Enter your name: ")
-    age = input("Enter your age: ")
+    age = int(input("Enter your age: "))  
     city = input("Enter your city: ")
     return {'name': name, 'age': age, 'city': city}
 

@@ -28,6 +28,7 @@ def main():
         print(f"Priemgetallen tussen {start} en {end}:", primes if primes else "Geen priemgetallen gevonden.")
     else:
         print("Ongeldige keuze.")
+       
 
 if __name__ == "__main__":
     main()
