@@ -1,4 +1,5 @@
-from functions import perform_operation
+from functions import *
+
 def main():
   while True:
     print("Wat wilt u doen? ")
@@ -20,14 +21,12 @@ def main():
       n2 = float(input())
     else:
       print("Voer het getal in:")
-      n1 = float(input())
+      n1 = float 
       n2 = None
 
-    result = perform_operation(choice, n1, n2)
+    result = perform_operation(choice, n1,n2)
     print(f"De uitkomst is: {result}")
 
-    print(f"Wil je wat met de uitkomst ({result}) doen? A) iets optellen, B) iets aftrekken, C) met iets vermenigvuldigen, D) ergens door delen, E) ophogen, F) verlagen, G) verdubbelen, H) halveren of I) niets?")
-    choice = input()
     if choice == 'I':
       break
 
