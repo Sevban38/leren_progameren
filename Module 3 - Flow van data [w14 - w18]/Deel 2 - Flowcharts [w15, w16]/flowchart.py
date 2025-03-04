@@ -1,5 +1,6 @@
 import random
 
+rondes = 0
 geradengetalen = []
 kansen = 0
 geheimgetal = random.randint(1, 100)
@@ -13,6 +14,7 @@ while True:
         print("Gefeliciteerd, je hebt het getal geraden!")
         print(f"Het geheime getal was {geheimgetal}.")
         break
+        rondes += 1
     else: 
         geradengetalen.append(geradengetal)
     kansen += 1
@@ -20,4 +22,5 @@ while True:
         print("De getallen die je geraden hebt zijn: " + ', '.join(map(str, geradengetalen)))
         print(f"Je hebt het getal niet geraden. Het geheime getal was {geheimgetal}.")
         break
+        rondes += 1
 
