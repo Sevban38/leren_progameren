@@ -3,7 +3,7 @@ JOURNEY_IN_DAYS = 0
 
 #data
 mainCharacter = {
-    'name' : '',
+    'name' : 'Sevban',
     'ownsHorse' : True,
     'adventuring' : True,
     'cash' : {
