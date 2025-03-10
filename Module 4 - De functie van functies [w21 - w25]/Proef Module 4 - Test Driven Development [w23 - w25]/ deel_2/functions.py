@@ -5,19 +5,26 @@ from data import JOURNEY_IN_DAYS
 ##################### O03 #####################
 
 def copper2silver(amount:int) -> float:
-    pass
+    return amount / 10
 
 def silver2gold(amount:int) -> float:
-    pass
+    return amount / 5
 
 def copper2gold(amount:int) -> float:
-    pass
+    silver_amount = copper2silver(amount)
+    return silver2gold(silver_amount)
 
 def platinum2gold(amount:int) -> float:
-    pass
+    return amount * 25
 
 def getPersonCashInGold(personCash:dict) -> float:
-    pass
+    copper = personCash.get('copper', 0)
+    silver = personCash.get('silver', 0)
+    gold = personCash.get('gold', 0)
+    platinum = personCash.get('platinum', 0)
+
+    total_gold = copper2gold(copper) + silver2gold(silver) + gold + platinum2gold(platinum)
+    return total_gold
 
 ##################### O05 #####################
 
