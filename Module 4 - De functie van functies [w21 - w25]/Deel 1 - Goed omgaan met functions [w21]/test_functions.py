@@ -52,4 +52,31 @@ def test_get_n_primes():
     assert get_n_primes(5) == [2, 3, 5, 7, 11]
 
     # Test case 4: n = 10
-    assert get_n_primes(10) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+    assert get_n_primes(10) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]from functions import getPersonCashInGold
+
+def test_getPersonCashInGold():
+    # Test case 1: person has no cash
+    personCash = {}
+    assert getPersonCashInGold(personCash) == 0
+
+    # Test case 2: person has only copper
+    personCash = {'copper': 100}
+    assert getPersonCashInGold(personCash) == 0.01
+
+    # Test case 3: person has only silver
+    personCash = {'silver': 10}
+    assert getPersonCashInGold(personCash) == 0.1
+
+    # Test case 4: person has only gold
+    personCash = {'gold': 1}
+    assert getPersonCashInGold(personCash) == 1
+
+    # Test case 5: person has only platinum
+    personCash = {'platinum': 0.1}
+    assert getPersonCashInGold(personCash) == 10
+
+    # Test case 6: person has a mix of different types of cash
+    personCash = {'copper': 100, 'silver': 10, 'gold': 1, 'platinum': 0.1}
+    assert getPersonCashInGold(personCash) == 11.11
+
+test_getPersonCashInGold()
