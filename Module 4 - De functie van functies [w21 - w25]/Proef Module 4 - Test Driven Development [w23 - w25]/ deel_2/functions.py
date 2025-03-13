@@ -1,6 +1,9 @@
 import time
 from termcolor import colored
 from data import *
+import math
+from data import *
+
 
 ##################### O03 #####################
 
@@ -38,27 +41,30 @@ def getJourneyFoodCostsInGold(people:int, horse:int) -> float:
 ##################### O06 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    return [item for item in list if item.get(key) == value]
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    return getFromListByKeyIs(people, 'adventuring', True)
 
 def getShareWithFriends(friends:list) -> list:
-    pass
+    return getFromListByKeyIs(friends, 'shareWith', True)
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    adventuring_people = getAdventuringPeople(friends)
+    return getShareWithFriends(adventuring_people)
 
 ##################### O07 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    return math.ceil(people / 2) 
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    return math.ceil(people / 3)
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
+    horse_cost = horses * COST_HORSE_SILVER_PER_DAY * JOURNEY_IN_DAYS
+    tent_cost = math.ceil(tents / 7) * COST_TENT_GOLD_PER_WEEK
+    return copper2gold(horse_cost) + tent_cost
 
 ##################### O08 #####################
 
