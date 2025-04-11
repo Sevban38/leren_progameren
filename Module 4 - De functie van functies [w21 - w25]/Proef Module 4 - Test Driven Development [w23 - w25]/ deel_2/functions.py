@@ -70,14 +70,30 @@ def getTotalRentalCost(horses:int, tents:int) -> float:
 ##################### O08 #####################
 
 def getItemsAsText(items:list) -> str:
-    item_texts = []
-    for item in items:
-        amount = item['amount']
-        unit = item['unit']
-        name = item['name']
-        item_text = f"{amount}{unit} {name}"
-        item_texts.append(item_text)
-    return ', '.join(item_texts).replace(', ', ' & ', len(item_texts) - 1)
+   zin = ""
+   for index,item in enumerate (items): 
+       amount = item['amount']
+       unit = item['unit']
+       name = item['name']
+       zin += f"{amount}{unit} {name}"
+       if index < len(items) - 2:
+              zin += ", " 
+       elif index == len(items) - 2:
+           zin += " & "
+   return zin
+           
+   
+   
+   
+   
+# item_texts = []
+# for item in items:
+#     amount = item['amount']
+#     unit = item['unit']
+#     name = item['name']
+#     item_text = f"{amount}{unit} {name}"
+#     item_texts.append(item_text)
+# return ', '.join(item_texts).replace(', ', ' & ', len(item_texts) - 1)
 
 def getItemsValueInGold(items:list) -> float:
     total_value = 0
@@ -96,7 +112,7 @@ def getItemsValueInGold(items:list) -> float:
         elif price_type == 'platinum':
             item_value = platinum2gold(price_amount) * amount
         total_value += item_value
-    return round(total_value, 2)
+    return float(round(total_value, 2))
 
 ##################### O09 #####################
 
