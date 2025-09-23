@@ -1,0 +1,53 @@
+FUNCTIE stap1():
+    LOOP oneindig:
+        PROBEER:
+            vraag gebruiker: "Hoeveel bolletjes wilt u?" -> aantal
+            ALS aantal tussen 1 en 3:
+                RETURN aantal, GEEN verpakking
+            ANDERS ALS aantal tussen 4 en 8:
+                PRINT "Dank, krijgt u van mij een bakje met {aantal} bolletjes."
+                RETURN aantal, "bakje"
+            ANDERS ALS aantal > 8:
+                PRINT "Sorry, zulke grote bakken hebben we niet."
+            ANDERS:
+                PRINT "Sorry dat snap ik niet..."
+        ALS invoer ongeldig:
+            PRINT "Sorry dat snap ik niet..."
+
+
+FUNCTIE stap2(aantal):
+    LOOP oneindig:
+        vraag gebruiker: "Wilt u deze {aantal} bolletje(s) in een hoorntje of een bakje?" -> keuze
+        ZET keuze naar kleine letters
+        ALS keuze in ["hoorntje", "hoorn", "bak", "bakje"]:
+            RETURN keuze
+        ANDERS:
+            PRINT "Sorry, dat snap ik niet..."
+
+
+FUNCTIE stap3(aantal, verpakking):
+    PRINT "Hier is uw {verpakking} met {aantal} bolletje(s)."
+    LOOP oneindig:
+        vraag gebruiker: "Wilt u nog meer bestellen?" → meer
+        ZET meer naar kleine letters
+        ALS meer == "ja":
+            RETURN WAAR (doorgaan)
+        ANDERS ALS meer == "nee":
+            PRINT "Bedankt en tot ziens!"
+            RETURN ONWAAR (stoppen)
+        ANDERS:
+            PRINT "Sorry, dat snap ik niet..."
+
+
+FUNCTIE main():
+    PRINT "Welkom bij Papi Gelato je mag alles kiezen zolang het maar vanille ijs is."
+    LOOP oneindig:
+        aantal, verpakking = stap1()
+        ALS verpakking leeg is:
+            verpakking = stap2(aantal)
+        doorgaan = stap3(aantal, verpakking)
+        ALS doorgaan == ONWAAR:
+            STOP de lus
+
+
+START main()
