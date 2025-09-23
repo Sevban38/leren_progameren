@@ -1,3 +1,13 @@
+def main(): #main functie met alles erin
+    print("Welkom bij Papi Gelato je mag alles maken kiezen zolang het maar vanille ijs is.")
+    while True:
+        aantal, verpakking = stap1()
+        if not verpakking:  
+            verpakking = stap2(aantal)
+        doorgaan = stap3(aantal, verpakking)
+        if not doorgaan:
+            break
+
 def stap1():
     while True:
         try:
@@ -37,15 +47,7 @@ def stap3(aantal, verpakking): #de laatste stap
             print("Sorry, dat snap ik niet...")
 
 
-def main(): #main functie met alles erin
-    print("Welkom bij Papi Gelato je mag alles maken kiezen zolang het maar vanille ijs is.")
-    while True:
-        aantal, verpakking = stap1()
-        if not verpakking:  
-            verpakking = stap2(aantal)
-        doorgaan = stap3(aantal, verpakking)
-        if not doorgaan:
-            break
+
 
 
 main()
